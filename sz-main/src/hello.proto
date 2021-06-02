@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+package pdf;
+
+service PdfService {
+  rpc Hello (Empty) returns (Greeting) {}
+}
+
+message Empty {
+}
+
+message Greeting {
+  string text = 2;
+}
