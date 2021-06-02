@@ -5,6 +5,7 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 
 const pdfServiceUrl = process.env.PDF_SVC_URL || 'localhost:5000';
+console.log('PDF Service: ', pdfServiceUrl);
 
 @Module({
   imports: [
