@@ -4,6 +4,8 @@ import { AppService } from './app.service';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { join } from 'path';
 
+const pdfServiceUrl = process.env.PDF_SVC_URL || 'localhost:5000';
+
 @Module({
   imports: [
     ClientsModule.register([
@@ -13,6 +15,7 @@ import { join } from 'path';
         options: {
           package: 'pdf',
           protoPath: join(__dirname, 'hello.proto'),
+          url: pdfServiceUrl
         },
       },
     ]),
