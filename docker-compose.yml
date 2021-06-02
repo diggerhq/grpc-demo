@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+  main-svc:
+    environment:
+      pdf_host: "pdf-svc"
+      pdf_port: 3001
+    build:
+      context: "sz-main"
+    # volumes:
+    #   - type: bind
+    #     source: ./sz-main
+    #     target: /usr/src/app
+    restart: always
+    ports:
+      - "3000:3000"
+    depends_on:
+      - pdf-svc
+
+  pdf-svc:
+    build:
+      context: "pdf-svc"
+    # volumes:
+    #   - type: bind
+    #     source: ./pdf-svc
+    #     target: /usr/src/app
+    restart: always
+    ports:
+      - "3001:3001"
+    
