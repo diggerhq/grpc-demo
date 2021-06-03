@@ -3,6 +3,12 @@ project:
 environments:
   local-docker:
     target: docker
+
+resources:
+  - database:
+    name: main
+    size: 10gb
+
 services:
   sz-main:
     service_name: sz-main
