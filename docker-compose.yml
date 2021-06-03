@@ -3,8 +3,7 @@ version: '3.7'
 services:
   main-svc:
     environment:
-      pdf_host: "pdf-svc"
-      pdf_port: 3001
+      - PDF_SVC_URL="pdf-svc:5000"
     build:
       context: "sz-main"
     # volumes:
@@ -25,6 +24,6 @@ services:
     #     source: ./pdf-svc
     #     target: /usr/src/app
     restart: always
-    ports:
-      - "3001:3001"
+    # ports:
+    #   - "5000:5000"
     

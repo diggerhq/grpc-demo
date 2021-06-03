@@ -1,0 +1,8 @@
+
+default:
+  needs_database: false
+  bastion_public_key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQD7XHSBTsHEnumuNrY8IbW+VqkhSLRYF1UMTSscJJFAekZUdvtexoy2c3TdGm4ZlawhG6XxJUKCZCxUOkVlEfnHdJ6BocActUaFeoCcVbFV5yRKqsMvbYuIjn2XjzC5nQPPiIB/TL3E9VA49O9hWRgaEpfn2Ded9FrmCPhQPiWKy9+tyQNcqjH+vHl7CP+H1GY9wjPTSwQLqDU17qaon0JktqXLQCStxpKBVTf76SUsD1yQ60RwpXVEq9USNRvB6qdASDcsqD2f8XZdPEX0U4DtUZ6QiIe1tEbuZAhs4hUdjDurqAytsMzM8DueLNiZc+vOv7nCWhOHmVPg8IN9iVTv mohamedsayed@Mohameds-MacBook-Pro.local
+
+
+demo:
+  needs_database: true
